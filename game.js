@@ -46,7 +46,7 @@ function playRound() {
 
     if (playerScore === 10) {
         alert("Congratulations! You reached 10 wins.");
-        window.open('https://www.youtube.com/', '_blank');
+        window.open('https://cl.gy/XWop', '_blank');
     } else if (computerScore === 10) {
         alert("The computer reached 10 wins first. Better luck next time!");
     }
