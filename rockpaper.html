@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <style>
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            bottom: 400px;
+            font-size: 80px;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+      
+        .emoji {
+            font-size: 50px;
+            cursor: pointer;
+            margin: 10px;
+            display: inline-block;
+            position: relative;
+            right: 45px;
+            top: 30px;
+        }
+        .input-container {
+            margin-top: 20px;
+            display: block;
+            position: relative;
+            top: 35px;
+            left: -50px;
+            
+        }
+        p{
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #t2{
+            position: relative;
+            right: 63px;
+        }
+
+        #arrow1{
+            position: absolute;
+            right: 890px;
+            top: 238px  ;
+        }
+
+        #arrow2{
+            position: absolute;
+            left: -43px;
+            top: -3px   ;
+        }
+
+        #arrow1,#arrow2{
+            animation: arrowMove 1s ease-in 0.2s infinite ;
+        }
+
+        @keyframes arrowMove{
+            0%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(10px);
+                color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>RPS Game</h1>
+    <p id="t1"><span id="arrow1">➤</span> Click On one of the Emoji's to enter your move</p>
+    <p id="t2"><span id="arrow2">➤</span>Get 10 Wins to get a surprise!</p>
+    <div id="emojis">
+        <span class="emoji" onclick="setPlayerMove('✊')">✊</span>
+        <span class="emoji" onclick="setPlayerMove('✋')">✋</span>
+        <span class="emoji" onclick="setPlayerMove('✌️')">✌️</span>
+    </div>
+    <div class="input-container">
+        <input type="text" id="playerMove" placeholder="Click to set Move" readonly>
+        <button onclick="playRound()">Play</button>
+    </div>
+    <div id="result"></div>
+    <script src="game.js"></script>
+</body>
+</html>
